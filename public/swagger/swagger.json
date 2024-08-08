@@ -1,0 +1,38 @@
+{
+    "swagger": "2.0",
+    "paths": {
+        "/admin/login": {
+            "post": {
+                "tags": [
+                    "User Register & Login Section"
+                ],
+                "description": "Login with Email",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "valid email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "admin password",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Please provide all data"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
